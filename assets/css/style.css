@@ -1,3 +1,14 @@
+#app {
+  height: 100vh;
+  background-color: rgb(78, 78, 78);
+}
+
+
 ul {
   list-style: none;
+}
+
+.add_task {
+  display: flex;
+  align-items: center;
 }
