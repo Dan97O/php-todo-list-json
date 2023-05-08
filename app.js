@@ -1,8 +1,10 @@
+
 const { createApp } = Vue
 createApp({
   data() {
     return {
-
+      tasks: null,
+      api_url: './tasks.json',
     }
   },
   methods: {
