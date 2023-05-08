@@ -18,6 +18,12 @@ ul {
   text-decoration-color: red !important;
 }
 
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
 li:hover {
   cursor: pointer;
+  background-color: lightgray;
 }

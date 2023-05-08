@@ -8,7 +8,18 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <title>TODO LIST</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- cdn bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- my style css -->
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>strng-pwd-gnrt</title>
+</head>
+
+<title>TODO LIST</title>
 </head>
 
 <body>
@@ -20,8 +31,11 @@
           <h1 class="text-center mt-5 text-light">Todo List</h1>
           <div class="card d-flex justify-content-center mt-3">
             <ul class="py-3">
-              <li v-for="task in tasks" :class="{ completed: task.completed }" @click="toggleCompleted(task)">
-                {{ task.name }}
+              <li class="my-2" v-for="task in tasks" >
+                <span :class="{ completed: task.completed }" @click="toggleCompleted(task)"> {{ task.name }}</span>
+                <button @click="completeTask(index)" class="bg-danger border-0 rounded py-1 px-2 me-3">
+                  <i class="fa-solid fa-trash-can text-light "></i>
+                </button>
               </li>
             </ul>
           </div>

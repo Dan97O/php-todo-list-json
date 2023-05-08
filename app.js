@@ -35,6 +35,10 @@ createApp({
     toggleCompleted(task) {
       task.completed = !task.completed;
     },
+
+    completeTask(i) {
+      this.tasks.splice(i, 1);
+    },
   },
   mounted() {
     axios
