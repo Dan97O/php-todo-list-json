@@ -12,3 +12,12 @@ ul {
   display: flex;
   align-items: center;
 }
+
+.completed {
+  text-decoration: line-through !important;
+  text-decoration-color: red !important;
+}
+
+li:hover {
+  cursor: pointer;
+}

@@ -20,8 +20,8 @@
           <h1 class="text-center mt-5 text-light">Todo List</h1>
           <div class="card d-flex justify-content-center mt-3">
             <ul class="py-3">
-              <li v-for="task in tasks">
-                {{task}}
+              <li v-for="task in tasks" :class="{ completed: task.completed }" @click="toggleCompleted(task)">
+                {{ task.name }}
               </li>
             </ul>
           </div>
@@ -58,15 +58,15 @@
   </div>
   <!-- /app -->
 
-      <!-- cdn axios -->
-      <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
-      <!-- cdn vue -->
-      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-      <!-- cdn bootstrap -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-      <script src='./app.js'></script>
+  <!-- cdn axios -->
+  <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
+  <!-- cdn vue -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- cdn bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src='./app.js'></script>
 </body>
 
 </html>
