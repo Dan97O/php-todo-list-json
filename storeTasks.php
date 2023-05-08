@@ -2,7 +2,8 @@
 
 if (isset($_POST['new_task'])) {
     $task = $_POST['new_task'];
-
+    //conversione in booleano
+    $task['completed'] = filter_var($task['completed'], FILTER_VALIDATE_BOOLEAN);
     // read the json file with file_get_contents
     $tasks_string = file_get_contents('tasks.json');
     // convert the json_string into an associative array with json_decode()
