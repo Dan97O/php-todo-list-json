@@ -16,7 +16,7 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <!-- my style css -->
   <link rel="stylesheet" href="./assets/style.css">
-  <title>strng-pwd-gnrt</title>
+  <title>Todo list</title>
 </head>
 
 <title>TODO LIST</title>
