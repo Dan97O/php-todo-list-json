@@ -17,12 +17,17 @@
 
 
 
-   <ul>
+    <ul>
       <li v-for="task in tasks">
         {{task}}
       </li>
     </ul>
 
+
+    <div class="add_task">
+      <input type="text" v-model="new_task" @keyup.enter="add_task" placeholder="Type a task here">
+      <button @click="add_task">Invia</button>
+    </div>
 
 
 
