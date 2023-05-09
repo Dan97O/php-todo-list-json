@@ -3,12 +3,25 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      tasks: null,
+      tasks: [],
       api_url: './tasks.json',
+      api_completeTask: "./deleteTask.php",
       new_task: ''
     }
   },
   methods: {
+
+    getTasks() {
+      axios
+        .get(this.api_url)
+        .then((response) => {
+          this.tasks = response.data;
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    },
+
     add_task() {
       //console.log('add a new task to the list');
       const data = {
@@ -36,19 +49,24 @@ createApp({
       task.completed = !task.completed;
     },
 
-    completeTask(i) {
-      this.tasks.splice(i, 1);
+    completeTask(index) {
+      const data = {
+        completeTask: index,
+      };
+
+      axios
+        .post(this.api_completeTask, data, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((response) => {
+          this.tasks = response.data;
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
     },
   },
   mounted() {
-    axios
-      .get(this.api_url)
-      .then(response => {
-        //console.log(response);
-        this.tasks = response.data
-      })
-      .catch(error => {
-        console.error(error.message);
-      })
+    this.getTasks();
   }
 }).mount('#app')
