@@ -25,7 +25,7 @@
         <div class="col-6">
           <h1 class="text-center mt-5 text-light">Todo List</h1>
           <div class="card d-flex justify-content-center mt-3 flex-wrap">
-            <ul class="p-0 px-3 py-3 d-flex flex-column w-100 flex-wrap">
+            <ul class="p-0 px-3 py-3 d-flex w-100 flex-wrap">
               <li class="my-2 w-100 d-flex align-items-center" v-for="(task, index) in tasks">
                 <span class="w-75" :class="{ completed: task.completed }" @click="toggleCompleted(task)"> {{ task.name
                   }}</span>
