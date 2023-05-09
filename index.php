@@ -24,11 +24,11 @@
       <div class="row d-flex justify-content-center">
         <div class="col-6">
           <h1 class="text-center mt-5 text-light">Todo List</h1>
-          <div class="card d-flex justify-content-center mt-3">
-            <ul class="py-3">
-              <li class="my-2" v-for="(task, index) in tasks" >
-                <span :class="{ completed: task.completed }" @click="toggleCompleted(task)"> {{ task.name }}</span>
-                <button @click="completeTask(index)" class="bg-danger border-0 rounded py-1 px-2 me-3">
+          <div class="card d-flex justify-content-center mt-3 flex-wrap">
+            <ul class="py-3 d-flex flex-column w-100 flex-wrap">
+              <li class="my-2 w-100 d-flex align-items-center" v-for="(task, index) in tasks" >
+                <span class="w-75" :class="{ completed: task.completed }" @click="toggleCompleted(task)"> {{ task.name }}</span>
+                <button @click="completeTask(index)" class="my_button me-3 py-2 px-2 bg-danger border-0 rounded d-flex align-items-center">
                   <i class="fa-solid fa-trash-can text-light "></i>
                 </button>
               </li>

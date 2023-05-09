@@ -23,7 +23,14 @@ li {
   justify-content: space-between;
 }
 
-li:hover {
+span:hover {
   cursor: pointer;
   background-color: lightgray;
+}
+
+.my_button {
+  padding: 25px 15px;
+  display: flex;
+  align-items: center;
+  height: 30px;
 }
