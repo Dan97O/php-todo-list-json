@@ -21,12 +21,15 @@ ul {
 li {
   display: flex;
   justify-content: space-between;
+  margin-right: 1rem;
+  border-bottom: 1px solid lightgray;
 }
 
-span:hover {
+li:hover {
   cursor: pointer;
   background-color: lightgray;
 }
+
 
 .my_button {
   padding: 25px 15px;

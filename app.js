@@ -31,18 +31,22 @@ createApp({
         }
       }
 
-      axios.post(
-        './storeTasks.php',
-        data,
-        {
-          headers: { 'Content-Type': 'multipart/form-data' }
-        }).then(response => {
-          //console.log(response);
-          this.tasks = response.data
-        })
-        .catch(error => {
-          console.error(error.message);
-        })
+      if (this.add_task) {
+        this.new_task = ''
+        axios.post(
+          './storeTasks.php',
+          data,
+          {
+            headers: { 'Content-Type': 'multipart/form-data' }
+          }).then(response => {
+            //console.log(response);
+            this.tasks = response.data
+          })
+          .catch(error => {
+            console.error(error.message);
+          })
+      }
+
     },
 
     toggleCompleted(task) {
